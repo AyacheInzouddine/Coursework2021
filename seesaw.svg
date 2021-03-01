@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="handson.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+<g class="background">
+  <rect class="sky" fill="cyan" x="0" y="0" width="1000" height="300">
+    <animate attributeName="fill" values="cyan;rgb(0,0,103);cyan" dur="20s" repeatCount="indefinite"/>
+   </rect>
+  <rect class="weed" fill="green" x="0" y="300" width="1000" height="450"/>
+</g>
+
+<g class="Seesaw">
+    <path style="fill:orange;" d="M800 600 L850 600 L825 550 Z" />
+        
+    <line x1="760" y1="550" x2="890" y2="550" style="stroke:orange;stroke-width:4" width="40">
+        <animate attributeName="y1" values="550;570;550;530;550" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="550;530;550;570;550" dur="3s" repeatCount="indefinite" />
+    </line>
+</g>
+
+<g class="People">
+    <circle cx="765" cy="490" r="10" stroke="black" stroke-width="3" fill="pink" >
+        <animate attributeName="cy" values="490;510;490;470;490" dur="3s" repeatCount="indefinite" />
+    </circle>
+
+    <circle cx="890" cy="490" r="10" stroke="black" stroke-width="3" fill="pink" >
+        <animate attributeName="cy" values="490;470;490;510;490" dur="3s" repeatCount="indefinite" />
+    </circle>
+
+    <ellipse cx="765" cy="525" rx="15" ry="25" fill="red">
+        <animate attributeName="cy" values="525;545;525;505;525" dur="3s" repeatCount="indefinite" />
+    </ellipse>
+
+    <ellipse cx="890" cy="525" rx="15" ry="25" fill="blue">
+        <animate attributeName="cy" values="525;505;525;545;525" dur="3s" repeatCount="indefinite" />
+    </ellipse>
+</g>
+
+<g class="House">
+    <path style="fill:rgb(128,64,0);" d="M200 400 L500 400 L350 320 Z" />
+    <rect class="body" fill="red" x="200" y="400" width="300" height="200"/>
+    <rect class="window" fill="yellow" x="220" y="420" width="60" height="50"/>
+    <rect class="window" fill="yellow" x="420" y="420" width="60" height="50"/>
+</g>
+
+</svg>
