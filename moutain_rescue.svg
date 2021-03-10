@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="handson.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+//The overall background of the animation
+<g class="background">
+
+	//The sky of our animation
+  <rect class="sky" fill="rgb(135,206,235)" x="0" y="0" width="1000" height="300" />
+
+	//The mountain of our animation
+  <rect fill="rgb(128,64,0)" x="0" y="300" width="1000" height="450"/>
+  <path style="fill:white;" d="M300 300 L600 300 L450 220 Z" />
+  <path style="fill:rgb(128,64,0);" d="M600 300 L1000 0 L1000 300 Z" />
+  <path style="fill:rgb(135,206,235);" d="M0 480 L300 300 L0 300 Z" />
+  //The snow on top of the mountain
+   <path style="fill:white;" d="M867 100 L1000 100 L1000 0 Z" />
+   
+   //Birds and clouds on the sky
+   
+   //Clouds done with Bezier curves
+   <path style="fill:white;opacity:0.7;" d="M178,172 C188,92 80,93 88,171" />
+   
+</g>
+
+</svg>
