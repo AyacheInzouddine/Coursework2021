@@ -30,6 +30,7 @@
     <animateMotion
         path="M -300 0 H 1000 Z"
         dur="20s" repeatCount="indefinite" />
+    </path>
 </g>
 
 </svg>
