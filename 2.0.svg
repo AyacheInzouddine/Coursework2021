@@ -4,60 +4,243 @@
 	<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" xmlns:xlink="http://www.w3.org/1999/xlink" >
 
 
-		//definition of objects
+		<!-- definition of objects -->
 		<defs>
-			//blackScreen
-			<g id="blackscreen">
-				<rect x="0" y="0" width="1000" height="750" fill="black"/>
-			</g>
+				<!-- blackScreen -->
+				<rect id="blackscreen" x="0" y="0" width="1000" height="750" fill="black"/>
+				<!-- The sky of our animation -->
+				<rect id="sky" class="sky" fill="rgb(135,206,235)" x="0" y="0" width="1000" height="300" />
+				<rect id="MyBackground" class="background" x="0" y="0" width="1000" height="750" />
+				<!-- Clouds done with Bezier curves -->
+		    <path id="cloud" style="fill:white;" opacity='0.7' d="M100,100 c-10,-25 36,-54 54,-23 c4,-16 56,-44 81,9 c38,-9 50,53 -7,37 c4,42 -90,39 -87,7 c-32,28 -74,-6 -41,-29 l0,-1">
+				<!-- Curves of the mountain -->
+				<path id="curves" d="M 0,260 C 7,240 13,106 200,110 c 64,10 100,50 350,300 20,20 80,12 320,-50 5,-3 50,-10 50,1500" stroke="black" fill="transparent"/>
+		    <animateMotion
+		        path="M -300 0 H 1000 Z"
+		        dur="20s" repeatCount="indefinite" />
+		    </path>
+				<!-- Sun -->
+				<circle id="sun" style="fill:yellow;" cx="50" cy="50" r="50"/>
 
-			//---------------firstscene-----------------
-			<g id="firstscene">
-				<g id="sky">
-					//The sky of our animation
-				  <rect class="sky" fill="rgb(135,206,235)" x="0" y="0" width="1000" height="300" />
-				</g>
-				//mountain
+			<!-- definition of compound objects -->
 				<g id="mountain">
 				  <rect fill="rgb(128,64,0)" x="0" y="300" width="1000" height="450"/>
 				  <path style="fill:white;" d="M300 300 L600 300 L450 220 Z" />
 				  <path style="fill:rgb(128,64,0);" d="M600 300 L1000 0 L1000 300 Z" />
 				  <path style="fill:rgb(135,206,235);" d="M0 480 L300 300 L0 300 Z" />
+
+					<path style="fill:green;" d="M610,270 l-49,0 l23,-26 l-23,1 l26,-27 l-26,0 l37,-38 l39,40 l-28,-1 l25,25 l-22,0 l24,26 l-26,0" />
+			    <rect style="fill:rgb(139,69,19);" x="590" y="270" width="20" height="30"/>
+
+					<path style="fill:white;" d="M867 100 L1000 100 L1000 0 Z" />
+
 				</g>
-				//The snow on top of the mountain
-				<g id="snow_top">
-			  	<path style="fill:white;" d="M867 100 L1000 100 L1000 0 Z" />
-				</g>
+
 				<g id="tree">
 					// The tree on the mountain
 					<path style="fill:green;" d="M610,270 l-49,0 l23,-26 l-23,1 l26,-27 l-26,0 l37,-38 l39,40 l-28,-1 l25,25 l-22,0 l24,26 l-26,0" />
 			 		<rect style="fill:rgb(139,69,19);" x="590" y="270" width="20" height="30"/>
 			 	</g>
-				//---------------transition------------------
-				<set attributeName="opacity" to="0" begin="indefinite"/>
-			</g>
-			<g id="transition">
-				<use xlink:href="#blackscreen"/>
-				<set attributeName="opacity" to="0"/>
-			</g>
-			<g id="skier">
-			    <circle cx="765" cy="490" r="10" stroke="black" stroke-width="3" fill="white" >
-			       
+
+				<g id="snow">
+					<circle style="fill:white;" cx="0" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="7s" repeatCount="indefinite" />
 			    </circle>
 
-			    <ellipse cx="765" cy="525" rx="15" ry="25" fill="white" stroke="black">
-			    </ellipse>
+			    <circle style="fill:white;" cx="100" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="10s" repeatCount="indefinite" />
+			    </circle>
 
-					<rect x="735px" y="550" width="100" height="5">
+			    <circle style="fill:white;" cx="200" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="6s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="300" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="9s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="400" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="5s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="500" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="9s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="600" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="5s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="700" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="8s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="800" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="10s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="900" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="5s" repeatCount="indefinite" />
+			    </circle>
+
+			    <circle style="fill:white;" cx="1000" cy="50" r="5">
+			    <animateMotion
+			        path="M 100 -100 L 100 850"
+			        dur="7s" repeatCount="indefinite" />
+			    </circle>
+				</g>
+				<g id="skier">
+			    <circle cx="100" cy="60" r="10" stroke="black" stroke-width="3" fill="white">
+						<animate attributeName="cy" values="60;57.5;55;52.5;50;60;80;90;110;130;150;170;190;210;230;250;270;290;310;330;350;370;360;350;340;330;320" dur="12s" begin="11s"/>
+						<animate attributeName="cx" values="100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;320;340;360;380;400;420;440;460;480;500;520;540;560;580;600;620;640;660;680;700;720;740;760" dur="12s" begin="11s"/>
+					</circle>
+			    <ellipse cx="100" cy="95" rx="15" ry="25" fill="white" stroke="black">
+						<animate attributeName="cy" values="95;92.5;90;87.5;85;95;115;125;145;165;185;205;225;245;265;285;305;325;345;365;385;405;395;385;375;365;355" dur="12s" begin="11s"/>
+						<animate attributeName="cx" values="100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;320;340;360;380;400;420;440;460;480;500;520;540;560;580;600;620;640;660;680;700;720;740;760" dur="12s" begin="11s"/>
+					</ellipse>
+					<rect x="60" y="115" width="100" height="5" transform="rotate(-2)">
+
+						<animate attributeName="y" values="115;115;112.5;110;112.5;120;145;155;175;195;215;235;255;275;295;315;335;355;375;395;415;435;455;445;435;425;415;405" dur="12s" begin="11s"/>
+						<animate attributeName="x" values="60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;270;290;310;330;350;370;390;410;430;450;470;490;510;530;550;570;590;610;630;650;670;690;710" dur="12s" begin="11s"/>
+
 					</rect>
-			</g>
+				</g>
+				<g id="attention">
+					<polygon points="550 15, 600 100, 500 100" stroke = 'olive' stroke-linejoin = 'miter' fill ="white" stroke-width ="10"/>
+					<rect class="attention1" x="545" y="40" width="10" height="25" stroke-linejoin ="round" />
+					<rect class="attention1" x="545" y="75" width="10" height="10" stroke-linejoin ="round" />
+				</g>
+				<g id="mountain2">
+					<circle class="snowcircle" cx="200" cy="345" r="200" />
+					<circle class="snowcircle" cx="80" cy="200" r="50" />
+					<circle class="snowcircle" cx="70" cy="210" r="50" />
+					<circle class="snowcircle" cx="60" cy="230" r="50" />
+					<circle class="snowcircle" cx="55" cy="245" r="50" />
+					<circle class="snowcircle" cx="50" cy="271" r="50" />
+					<circle class="snowcircle" cx="50" cy="280" r="50" />
+					<circle class="snowcircle" cx="150" cy="164" r="50" />
+					<circle class="snowcircle" cx="110" cy="175" r="50" />
+					<circle class="snowcircle" cx="90" cy="188" r="50" />
+					<circle class="snowcircle" cx="100" cy="181" r="50" />
+					<circle class="snowcircle" cx="130" cy="168" r="50" />
+					<circle class="snowcircle" cx="180" cy="160" r="50" />
+					<circle class="snowcircle" cx="210" cy="164" r="50" />
+					<circle class="snowcircle" cx="230" cy="175" r="50" />
+					<circle class="snowcircle" cx="250" cy="190" r="50" />
+					<circle class="snowcircle" cx="100" cy="800" r="450" />
+					<circle class="snowcircle" cx="269" cy="205" r="50" />
+
+					<ellipse cx="865" cy="700" rx="36" ry="300" fill="white"/>
+					<ellipse cx="875" cy="800" rx="30" ry="300" fill="white"/>
+
+					<circle class="snowcircle" cx="600" cy="750" r="230" />
+					<circle class="snowcircle" cx="600" cy="700" r="230" />
+					<circle class="snowcircle" cx="600" cy="650" r="230" />
+					<circle class="snowcircle" cx="448" cy="450" r="100" />
+					<circle class="snowcircle" cx="400" cy="402" r="100" />
+					<circle class="snowcircle" cx="370" cy="372" r="100" />
+					<circle class="snowcircle" cx="350" cy="352" r="100" />
+					<circle class="snowcircle" cx="330" cy="332" r="100" />
+					<circle class="snowcircle" cx="310" cy="320" r="100" />
+					<circle class="snowcircle" cx="305" cy="308" r="100"/>
+					<circle class="snowcircle" cx="475" cy="478" r="100"/>
+					<circle class="snowcircle" cx="490" cy="490" r="100"/>
+					<circle class="snowcircle" cx="430" cy="432" r="100"/>
+					<circle class="snowcircle" cx="740" cy="580" r="100"/>
+					<circle class="snowcircle" cx="740" cy="560" r="100"/>
+					<circle class="snowcircle" cx="740" cy="540" r="100"/>
+					<circle class="snowcircle" cx="740" cy="520" r="100"/>
+					<circle class="snowcircle" cx="740" cy="500" r="100"/>
+					<circle class="snowcircle" cx="740" cy="495" r="100"/>
+					<circle class="snowcircle" cx="700" cy="505" r="100"/>
+					<circle class="snowcircle" cx="680" cy="508" r="100"/>
+					<circle class="snowcircle" cx="867" cy="372" r="10"/>
+					<circle class="snowcircle" cx="867" cy="377" r="10"/>
+					<circle class="snowcircle" cx="868" cy="382" r="10"/>
+					<circle class="snowcircle" cx="870" cy="387" r="10"/>
+					<circle class="snowcircle" cx="872" cy="392" r="10"/>
+					<circle class="snowcircle" cx="873" cy="397" r="10"/>
+					<circle class="snowcircle" cx="873" cy="402" r="10"/>
+					<circle class="snowcircle" cx="874" cy="407" r="10"/>
+					<circle class="snowcircle" cx="874" cy="412" r="10"/>
+					<circle class="snowcircle" cx="850" cy="397" r="30"/>
+					<circle class="snowcircle" cx="830" cy="402" r="30"/>
+					<circle class="snowcircle" cx="810" cy="407" r="30"/>
+					<circle class="snowcircle" cx="790" cy="412" r="30"/>
+					<circle class="snowcircle" cx="770" cy="417" r="30"/>
+					<circle class="snowcircle" cx="830" cy="427" r="30"/>
+					<circle class="snowcircle" cx="820" cy="467" r="30"/>
+				</g>
+
+
+				<g id="firstscene">
+					<use xlink:href="#MyBackground"/>
+					<use xlink:href="#cloud"/>
+					<use xlink:href="#sun"/>
+					<use xlink:href ="#mountain"/>
+					<use xlink:href="#snow"/>
+			  </g>
+				<g id="secondscene">
+					<use xlink:href="#MyBackground"/>
+					<use xlink:href="#curves"/>
+					<use xlink:href="#cloud"/>
+					<use xlink:href="#sun"/>
+					<use xlink:href = "#mountain2"/>
+					<use xlink:href="#snow"/>
+					<use xlink:href = "#skier"/>
+			  </g>
+
+
 
 
 
 		</defs>
 
-		<use xlink:href = "#firstscene"/>
-		<use xlink:href = "#skier"/>
+		//firstscene
+		<g opacity="0">
+      <use xlink:href ="#firstscene"/>
+      <set attributeName="opacity" to="1" begin="0s"/>
+    </g>
+		//transition
+		<g opacity="0">
+      <use xlink:href="#blackscreen"/>
+      <set attributeName="opacity" to="1" begin="9s"/>
+    </g>
+		//Second Scene
+		<g opacity="0">
+      <use xlink:href="#secondscene"/>
+      <set attributeName="opacity" to="1" begin="10s"/>
+    </g>
+		//triangle attention
+		<g opacity="0">
+      <use xlink:href="#attention"/>
+      <set attributeName="opacity" to="1" begin="20s"/>
+    </g>
+		<g opacity="0">
+      <use xlink:href="#blackscreen"/>
+      <set attributeName="opacity" to="1" begin="23s"/>
+    </g>
+
 
 
 
