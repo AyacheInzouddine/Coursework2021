@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="handson.css" ?>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+
+		//definition of objects
+		<defs>
+			//blackScreen
+			<g id="blackscreen">
+				<rect x="0" y="0" width="1000" height="750" fill="black"/>
+			</g>
+
+			//---------------firstscene-----------------
+			<g id="firstscene">
+				<g id="sky">
+					//The sky of our animation
+				  <rect class="sky" fill="rgb(135,206,235)" x="0" y="0" width="1000" height="300" />
+				</g>
+				//mountain
+				<g id="mountain">
+				  <rect fill="rgb(128,64,0)" x="0" y="300" width="1000" height="450"/>
+				  <path style="fill:white;" d="M300 300 L600 300 L450 220 Z" />
+				  <path style="fill:rgb(128,64,0);" d="M600 300 L1000 0 L1000 300 Z" />
+				  <path style="fill:rgb(135,206,235);" d="M0 480 L300 300 L0 300 Z" />
+				</g>
+				//The snow on top of the mountain
+				<g id="snow_top">
+			  	<path style="fill:white;" d="M867 100 L1000 100 L1000 0 Z" />
+				</g>
+				<g id="tree">
+					// The tree on the mountain
+					<path style="fill:green;" d="M610,270 l-49,0 l23,-26 l-23,1 l26,-27 l-26,0 l37,-38 l39,40 l-28,-1 l25,25 l-22,0 l24,26 l-26,0" />
+			 		<rect style="fill:rgb(139,69,19);" x="590" y="270" width="20" height="30"/>
+			 	</g>
+				//---------------transition------------------
+				<set attributeName="opacity" to="0" begin="indefinite"/>
+			</g>
+			<g id="transition">
+				<use xlink:href="#blackscreen"/>
+				<set attributeName="opacity" to="0"/>
+			</g>
+			<g id="skier">
+			    <circle cx="765" cy="490" r="10" stroke="black" stroke-width="3" fill="white" >
+			       
+			    </circle>
+
+			    <ellipse cx="765" cy="525" rx="15" ry="25" fill="white" stroke="black">
+			    </ellipse>
+
+					<rect x="735px" y="550" width="100" height="5">
+					</rect>
+			</g>
+
+
+
+		</defs>
+
+		<use xlink:href = "#firstscene"/>
+		<use xlink:href = "#skier"/>
+
+
+
+
+	</svg>
